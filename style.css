@@ -83,3 +83,10 @@ h2 {
     display: flex;
     justify-content: center;
 }
+
+#texto-sobre {
+    font-size: large;
+    margin-right: 55px;
+    margin-left: 100px;
+    margin-top: 50px;
+}
