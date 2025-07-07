@@ -13,7 +13,7 @@
         color: white;
         font-family: Arial, sans-serif;
         padding-top: 80px; /* Compensa o header fixo */
-        margin-bottom: 10000px;
+        margin-bottom: 500px;
     }
 
     header {
@@ -76,17 +76,11 @@
     .menu-inicial a:hover {
         background-color: black;
         color: greenyellow;
-        box-shadow: 0 2px greenyellow;
+        box-shadow: 1px 1px 1px 1px greenyellow;
     }
 
     #slogan {
         font-size: small;
-    }
-
-    h2 {
-        margin-top: 50px;
-        display: flex;
-        justify-content: center;
     }
 
     #texto-sobre {
@@ -96,6 +90,61 @@
         margin-top: 50px;
     }
 
-    #sobre {
+    #sobre, #clientes {
         scroll-margin-top: 100px;
+    }
+    
+    h2, h3 {
+        font-size: x-large;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+
+    h3 {
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    .partners {
+        background-color: var(--primary-color-light);
+        text-align: center;
+        margin-left: 60px;
+    }
+
+    .partners .box-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .partners .row {
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    .partners .box {
+        background: #fff;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 180px;
+        height: 180px;
+    }
+
+    .partners, .box > img {
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+    }
+
+    .partners .box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     }
