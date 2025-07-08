@@ -109,8 +109,15 @@
     .partners {
         background-color: var(--primary-color-light);
         text-align: center;
-        margin-left: 60px;
     }
+
+    .partners-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza horizontalmente os rows */
+        justify-content: center;
+    }
+
 
     .partners .box-container {
         display: flex;
