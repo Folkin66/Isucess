@@ -101,7 +101,7 @@ header {
     text-align: justify;
 }
 
-#sobre, #clientes {
+#sobre{
     scroll-margin-top: 100px;
 }
 
@@ -120,7 +120,6 @@ h3 {
 /* ======= CLIENTES ======= */
 .partners {
     text-align: center;
-    padding: 50px 20px;
 }
 
 .partners-grid {
@@ -138,7 +137,7 @@ h3 {
     justify-content: center;
     gap: 4rem;
     flex-wrap: wrap;
-}
+}   
 
 .partners .box {
     background: #fff;
@@ -170,7 +169,7 @@ h3 {
     background-color: black;
     color: #fff;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 20px;
