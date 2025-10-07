@@ -379,8 +379,9 @@ h3 {
 
     /* Itens de carrossel */
     .carousel-item {
-        width: 130px;
-        height: 130px;
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
     }
 
     /* Rodapé */
@@ -440,8 +441,9 @@ h3 {
     }
 
     .carousel-item {
-        width: 100px;
-        height: 100px;
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
     }
 
     .footer-logo img {
