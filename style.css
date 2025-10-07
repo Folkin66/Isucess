@@ -55,7 +55,7 @@ header {
 }
 
 #logo-div img {
-    height: 60px;
+    height: 70px;
     width: auto;
     object-fit: contain;
 }
@@ -101,8 +101,8 @@ header {
 }
 
 .menu-inicial a:hover {
-    color: #8A2BE2;
-    box-shadow: 1px 1px 1px 1px #8A2BE2;
+    color: greenyellow;
+    box-shadow: 1px 1px 1px 1px greenyellow;
 }
 
 
@@ -220,7 +220,7 @@ h3 {
 }
 
 .footer-rights a {
-    color: #8A2BE2;
+    color: greenyellow;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -268,7 +268,7 @@ h3 {
 .linkedin-card h5 {
     margin-bottom: 10px;
     font-size: 1rem;
-    color: #8A2BE2;
+    color: greenyellow;
     font-weight: bold;
 }
 
@@ -379,9 +379,8 @@ h3 {
 
     /* Itens de carrossel */
     .carousel-item {
-        width: 90%;
-        height: 90%;
-        object-fit: contain;
+        width: 130px;
+        height: 130px;
     }
 
     /* Rodapé */
@@ -441,9 +440,8 @@ h3 {
     }
 
     .carousel-item {
-        width: 90%;
-        height: 90%;
-        object-fit: contain;
+        width: 100px;
+        height: 100px;
     }
 
     .footer-logo img {
