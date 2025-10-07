@@ -106,10 +106,10 @@ header {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: cover;
-    object-position: center;
     border-radius: 0;
-    max-height: 80vh;
+    max-height: 85vh;
+    object-fit: contain;
+    object-position: center center;
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards;
 }
@@ -190,12 +190,8 @@ h3 {
 }
 
 @keyframes scroll-carousel {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50.5%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50.5%); }
 }
 
 /* ======= RESPONSIVIDADE DO CARROSSEL ======= */
@@ -227,10 +223,14 @@ h3 {
     padding: 0.7rem;
   }
 
-  /* Imagem palestra mais contida */
+  /* IMAGEM PALESTRA AJUSTADA PARA MOBILE */
   #img-palestra {
-      object-fit: contain;
+      width: 100%;
+      height: auto;
       max-height: 60vh;
+      object-fit: contain;
+      object-position: center center;
+      padding: 10px;
   }
 }
 
@@ -255,8 +255,14 @@ h3 {
     height: 85%;
   }
 
+  /* IMAGEM PALESTRA - CELULAR PEQUENO */
   #img-palestra {
+      width: 100%;
+      height: auto;
       max-height: 50vh;
+      object-fit: contain;
+      object-position: center;
+      padding: 8px;
   }
 }
 
