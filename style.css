@@ -101,12 +101,26 @@ header {
     box-shadow: 1px 1px 1px 1px greenyellow;
 }
 
-/* ======= MAIN ======= */
+/* ======= IMAGEM PALESTRA ======= */
 #img-palestra {
     width: 100%;
-    object-fit: contain;
-}   
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+    max-height: 80vh;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
 
+/* Efeito fade-in suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(1.02); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* ======= SOBRE ======= */
 #texto-sobre {
     font-size: 1.1rem;
     max-width: 900px;
@@ -212,6 +226,12 @@ h3 {
     height: 120px;
     padding: 0.7rem;
   }
+
+  /* Imagem palestra mais contida */
+  #img-palestra {
+      object-fit: contain;
+      max-height: 60vh;
+  }
 }
 
 @media (max-width: 480px) {
@@ -233,6 +253,10 @@ h3 {
   .carousel-item img {
     width: 85%;
     height: 85%;
+  }
+
+  #img-palestra {
+      max-height: 50vh;
   }
 }
 
