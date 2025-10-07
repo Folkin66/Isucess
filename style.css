@@ -121,7 +121,7 @@ header {
     max-width: 900px;
     margin: 50px auto;
     padding: 0 20px;
-    text-align: justify;
+    text-align: center;
 }
 
 #sobre {
@@ -188,7 +188,7 @@ h3 {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-51%);
+    transform: translateX(-50.5%);
   }
 }
 
@@ -379,8 +379,8 @@ h3 {
 
     /* Itens de carrossel */
     .carousel-item {
-        width: 130px;
-        height: 130px;
+        width: 160px;
+        height: 160px;
     }
 
     /* Rodapé */
