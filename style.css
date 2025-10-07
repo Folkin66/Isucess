@@ -26,11 +26,12 @@ main {
     flex: 1;
 }
 
+/* ======= HEADER ======= */
 header {
     background-color: black;
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between; /* Logo+texto à esquerda, menu à direita */
+    justify-content: space-between; 
     align-items: center;
     position: fixed;
     top: 0;
@@ -41,14 +42,12 @@ header {
     box-shadow: 0 1px 2px white;
 }
 
-/* Agrupa logo + texto (Isuccess + slogan) */
 .header-top {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-/* Logo */
 #logo-div {
     display: flex;
     align-items: center;
@@ -60,13 +59,11 @@ header {
     object-fit: contain;
 }
 
-/* Texto ao lado da logo */
 .texto-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin: 0;
 }
 
 .texto-header h1 {
@@ -81,7 +78,6 @@ header {
     margin-top: 3px;
 }
 
-/* Menu ao lado direito */
 .menu-inicial {
     display: flex;
     justify-content: flex-end;
@@ -103,11 +99,6 @@ header {
 .menu-inicial a:hover {
     color: greenyellow;
     box-shadow: 1px 1px 1px 1px greenyellow;
-}
-
-
-#slogan {
-    font-size: small;
 }
 
 /* ======= MAIN ======= */
@@ -154,6 +145,7 @@ h3 {
 
 .carousel-track {
   display: flex;
+  align-items: center;
   gap: 3rem;
   animation: scroll-carousel 26s linear infinite;
   width: max-content;
@@ -189,6 +181,58 @@ h3 {
   }
   to {
     transform: translateX(-50.5%);
+  }
+}
+
+/* ======= RESPONSIVIDADE DO CARROSSEL ======= */
+@media (max-width: 1024px) {
+  .carousel-track {
+    gap: 2rem;
+    animation-duration: 32s;
+  }
+
+  .carousel-item {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    padding: 30px 0;
+  }
+
+  .carousel-track {
+    gap: 1.5rem;
+    animation-duration: 40s;
+  }
+
+  .carousel-item {
+    width: 120px;
+    height: 120px;
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    padding: 25px 0;
+  }
+
+  .carousel-track {
+    gap: 1rem;
+    animation-duration: 48s;
+  }
+
+  .carousel-item {
+    width: 90px;
+    height: 90px;
+    padding: 0.5rem;
+  }
+
+  .carousel-item img {
+    width: 85%;
+    height: 85%;
   }
 }
 
@@ -294,20 +338,14 @@ h3 {
     transform: scale(1.1);
 }
 
-
-/* ======= RESPONSIVIDADE MOBILE ======= */
+/* ======= RESPONSIVIDADE GERAL ======= */
 @media (max-width: 768px) {
-    /* Estrutura geral do header */
     header {
-        display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: flex-start;
-        text-align: left;
         padding: 10px 15px;
     }
 
-    /* Agrupa logo + texto (Isuccess e slogan) */
     .header-top {
         display: flex;
         align-items: center;
@@ -316,27 +354,18 @@ h3 {
         width: 100%;
     }
 
-    /* Logo */
     #logo-div img {
         height: 60px;
         width: auto;
     }
 
-    /* Texto ao lado direito da logo */
     .texto-header {
-        display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: flex-start;
-        text-align: left;
-        margin: 0;
-        padding: 0;
     }
 
     .texto-header h1 {
         font-size: 1.3rem;
-        margin: 0;
-        line-height: 1.2;
     }
 
     #slogan {
@@ -347,12 +376,9 @@ h3 {
         line-height: 1.2;
     }
 
-    /* Menu abaixo da logo e slogan */
     .menu-inicial {
-        display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
-        align-items: flex-start;
         gap: 10px;
         margin-top: 12px;
         width: 100%;
@@ -361,29 +387,19 @@ h3 {
     .menu-inicial a {
         padding: 8px 14px;
         font-size: 0.9rem;
-        text-decoration: none;
     }
 
-    /* Conteúdo da seção sobre */
     #texto-sobre {
         font-size: 1rem;
         padding: 0 15px;
         text-align: left;
     }
 
-    /* Títulos */
     h2, h3 {
         font-size: 1.3rem;
         margin-top: 40px;
     }
 
-    /* Itens de carrossel */
-    .carousel-item {
-        width: 130px;
-        height: 130px;
-    }
-
-    /* Rodapé */
     .footer {
         flex-direction: column;
         gap: 15px;
@@ -401,7 +417,6 @@ h3 {
     }
 }
 
-/* ======= RESPONSIVIDADE MOBILE PEQUENA ======= */
 @media (max-width: 480px) {
     header {
         padding: 8px 10px;
@@ -437,11 +452,6 @@ h3 {
     #texto-sobre {
         font-size: 0.9rem;
         padding: 0 10px;
-    }
-
-    .carousel-item {
-        width: 100px;
-        height: 100px;
     }
 
     .footer-logo img {
