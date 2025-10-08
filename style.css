@@ -119,7 +119,7 @@ header {
   animation: fadeIn 2s ease-in-out forwards;
   position: relative; /* garante que z-index funcione */
     z-index: 1;
-    min-height:120px; /* evita altura zero */
+    min-height:150px; /* evita altura zero */
  
 }
 
