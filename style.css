@@ -23,7 +23,14 @@ body {
 }
 
 main {
-    flex: 1;
+  flex: 1;
+  overflow: visible; /* Permite que a imagem ultrapasse a altura da tela */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: black; /* mantém o contraste do site */
 }
 
 /* ======= HEADER ======= */
@@ -104,15 +111,17 @@ header {
 /* ======= IMAGEM PALESTRA ======= */
 #img-palestra {
   width: 100%;
-  height: auto;
+  height: auto; /* mantém proporção natural */
   display: block;
-  border-radius: 0;
-  object-fit: contain;
+  object-fit: contain; /* garante que nada será cortado */
   object-position: center;
+  border-radius: 0;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 100%;
+  max-height: none; /* remove qualquer limite de altura */
   animation: fadeIn 2s ease-in-out forwards;
   opacity: 0;
-  max-height: none; /* remove limite fixo */
-  padding: 0; /* evita corte */
 }
 
 /* Efeito fade-in suave */
@@ -548,14 +557,13 @@ h3 {
         width: auto;
     }
 
-     #img-palestra {
+   #img-palestra {
     width: 100%;
     height: auto;
-    max-height: none; /* permite altura total */
     object-fit: contain;
-    object-position: center center;
-    padding: 0;
+    object-position: center;
   }
+
 
     .texto-header {
         flex-direction: column;
@@ -629,13 +637,11 @@ h3 {
         height: 50px;
     }
 
-     #img-palestra {
+  #img-palestra {
     width: 100%;
     height: auto;
-    max-height: none; /* remove restrição total */
     object-fit: contain;
-    object-position: center center;
-    padding: 0;
+    object-position: center;
   }
 
     .texto-header h1 {
