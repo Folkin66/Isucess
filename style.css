@@ -12,26 +12,20 @@ html {
 }
 
 body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-    padding-top: 90px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
 main {
-  flex: 1;
-  overflow: visible; /* Permite que a imagem ultrapasse a altura da tela */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  background-color: black; /* mantém o contraste do site */
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    padding-top: 90px; /* Compensa o header fixo */
 }
+
 
 /* ======= HEADER ======= */
 header {
@@ -110,24 +104,61 @@ header {
 
 /* ======= IMAGEM PALESTRA ======= */
 #img-palestra {
-  width: 100%;
-  height: auto; /* mantém proporção natural */
   display: block;
-  object-fit: contain; /* garante que nada será cortado */
-  object-position: center;
-  border-radius: 0;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center center;
   margin: 0 auto;
   padding: 0;
-  max-width: 100%;
-  max-height: none; /* remove qualquer limite de altura */
-  animation: fadeIn 2s ease-in-out forwards;
+  border: none;
+  background: transparent;
   opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
 }
 
 /* Efeito fade-in suave */
 @keyframes fadeIn {
-    from { opacity: 0; transform: scale(1.02); }
-    to { opacity: 1; transform: scale(1); }
+  from { opacity: 0; transform: scale(1.02); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ======= IMAGEM — RESPONSIVIDADE ======= */
+@media (max-width: 1024px) {
+  #img-palestra {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    padding: 0;
+    opacity: 1;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  #img-palestra {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: none;
+    padding: 0;
+    display: block;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  #img-palestra {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: none;
+    padding: 0;
+    display: block;
+    opacity: 1;
+  }
 }
 
 /* ======= SOBRE ======= */
@@ -231,16 +262,6 @@ h3 {
     width: 120px;
     height: 120px;
     padding: 0.7rem;
-  }
-
-  /* IMAGEM PALESTRA AJUSTADA PARA MOBILE */
-  #img-palestra {
-      width: 100%;
-      height: auto;
-      max-height: 60vh;
-      object-fit: contain;
-      object-position: center center;
-      padding: 10px;
   }
 }
 
@@ -538,10 +559,16 @@ h3 {
 
 /* ======= RESPONSIVIDADE GERAL ======= */
 @media (max-width: 768px) {
+
+    main {
+        padding-top: 100px; /* Compensa o header fixo */
+    }
+
     header {
         flex-direction: column;
         align-items: center;
         padding: 10px 15px;
+        margin : 0 auto;
     }
 
     .header-top {
@@ -556,13 +583,6 @@ h3 {
         height: 60px;
         width: auto;
     }
-
-   #img-palestra {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    object-position: center;
-  }
 
 
     .texto-header {
@@ -636,13 +656,6 @@ h3 {
     #logo-div img {
         height: 50px;
     }
-
-  #img-palestra {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    object-position: center;
-  }
 
     .texto-header h1 {
         font-size: 1.1rem;
