@@ -24,6 +24,7 @@ main {
     background-color: black;
     text-align: center;
     padding-top: 90px; /* Compensa o header fixo */
+    overflow: visible; /* não cortar a imagem */
 }
 
 
@@ -116,6 +117,10 @@ header {
   background: transparent;
   opacity: 0;
   animation: fadeIn 2s ease-in-out forwards;
+  position: relative; /* garante que z-index funcione */
+    z-index: 1;
+    min-height:120px; /* evita altura zero */
+ 
 }
 
 /* Efeito fade-in suave */
