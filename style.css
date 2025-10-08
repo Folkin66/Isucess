@@ -561,7 +561,7 @@ h3 {
 @media (max-width: 768px) {
 
     main {
-        padding-top: 100px; /* Compensa o header fixo */
+        padding-top: 120px; /* Compensa o header fixo */
     }
 
     header {
