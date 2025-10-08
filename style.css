@@ -644,6 +644,12 @@ h3 {
 }
 
 @media (max-width: 480px) {
+
+    main {
+        padding-top: 130px; /* Compensa o header fixo */
+    }
+
+
     header {
         padding: 8px 10px;
         align-items: center;
