@@ -561,8 +561,11 @@ h3 {
 @media (max-width: 768px) {
 
     main {
-        padding-top: 169px; /* Compensa o header fixo */
-    }
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    padding-top: 90px; /* Compensa o header fixo */
+}
 
     header {
         flex-direction: column;
