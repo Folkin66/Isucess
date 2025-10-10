@@ -254,6 +254,12 @@ h3 {
 }
 
 @media (max-width: 768px) {
+
+  .heading {
+    margin-top: 80px;
+    margin-bottom: 0 auto;
+  }
+    
   .carousel {
     padding: 30px 0;
   }
@@ -264,13 +270,19 @@ h3 {
   }
 
   .carousel-item {
-    width: 120px;
-    height: 120px;
+    width: 170px;
+    height: 170px;
     padding: 0.7rem;
   }
 }
 
 @media (max-width: 480px) {
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 70px;
+  }
+
   .carousel {
     padding: 25px 0;
   }
@@ -281,8 +293,8 @@ h3 {
   }
 
   .carousel-item {
-    width: 90px;
-    height: 90px;
+    width: 180px;
+    height: 180px;
     padding: 0.5rem;
   }
 
